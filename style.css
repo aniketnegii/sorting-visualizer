@@ -124,10 +124,6 @@ section {
   grid-template-columns: 20% 60% 20%;
 }
 
-section #Info_Cont1 {
-  padding: 20%;
-}
-
 section #array_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -136,15 +132,11 @@ section #array_container {
   height: 70vh;
 }
 
-section #Info_Cont2 {
-  padding: 20%;
-}
-
 .hide {
   display: none;
 }
 
-.button-style {
+#button-style {
   background: none;
   color: inherit;
   border: none;
@@ -158,7 +150,7 @@ section #Info_Cont2 {
   .generate-new-button {
     padding: 3%;
   }
-  .button-style {
+  #button-style {
     background: none;
     color: inherit;
     border: none;
@@ -173,7 +165,7 @@ section #Info_Cont2 {
   .generate-new-button {
     padding: 2%;
   }
-  .button-style {
+  #button-style {
     background: none;
     color: inherit;
     border: none;
@@ -188,7 +180,7 @@ section #Info_Cont2 {
   .generate-new-button {
     padding: 2%;
   }
-  .button-style {
+  #button-style {
     background: none;
     color: inherit;
     border: none;
