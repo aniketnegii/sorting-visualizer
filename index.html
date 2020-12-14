@@ -24,12 +24,12 @@
                   Algorithms
                 </a>
                 <div class="dropdown-menu algos" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#"><button class="button-style" >Bubble</button></a>
-                      <a class="dropdown-item" href="#"><button class="button-style" >Selection</button></a>
-                      <a class="dropdown-item" href="#"><button class="button-style">Insertion</button></a>
-                      <a class="dropdown-item" href="#"> <button class="button-style" >Merge</button></a>
-                      <a class="dropdown-item" href="#"><button class="button-style">Quick</button></a>
-                      <a class="dropdown-item" href="#"><button class="button-style">Heap</button></a>
+                      <a class="dropdown-item" href="#"><button id="button-style" >Bubble</button></a>
+                      <a class="dropdown-item" href="#"><button id="button-style" >Selection</button></a>
+                      <a class="dropdown-item" href="#"><button id="button-style">Insertion</button></a>
+                      <a class="dropdown-item" href="#"> <button id="button-style" >Merge</button></a>
+                      <a class="dropdown-item" href="#"><button id="button-style">Quick</button></a>
+                      <a class="dropdown-item" href="#"><button id="button-style">Heap</button></a>
                 </div>
              </li>
              <li class="nav-item active spacing-nav">
@@ -40,7 +40,7 @@
                 <input id="a_size" type="range" min=20 max=150 step=1 value=80>
                 </li>
                 <li class="nav-item spacing-nav">
-                <a class="nav-link active" href="#" id="a_speed">Speed</a>
+                <a class="nav-link active" href="#">Speed</a>
                 <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
                 </li>
           </ul>
@@ -51,7 +51,7 @@
     <section>
 
         <div id="Info_Cont1">
-            <p>This is First Container</p>
+         
         </div>
 
         <div id="array_container">
@@ -59,15 +59,19 @@
         </div>
 
         <div id="Info_Cont2">
-            <p>This is Second Container</p>
         </div>
 
     </section>
 
-    <footer>
+    <div class="SortInfo__Body1"><article class="SortInfo__Article" style="display: none;">
+        <p>
+          <a href="https://en.wikipedia.org/wiki/Quicksort" target="_blank" rel="noopener noreferrer">Quick Sort</a> is an efficient, in-place sorting algorith that in practice is faster than MergeSort and HeapSort. However, it is not a stable sorting algorithm, meaning that the relative positioning of equal sort items is not preserved.Quicksort is a divide and conquer algorithm. Quicksort first divides a large array into two smaller sub-arrays: the low elements and the high elements. Quicksort can then recursively sort the sub-arrays. The steps are:</p>
+          <ol>
+            <li>Pick an element, called a pivot, from the array. This is usually done at random.</li><li>Move pivot element to the start of the array.</li><li><em>Partitioning:</em> reorder the array so that all elements with values less than the pivot come before the pivot, while all elements with values greater than the pivot come after it (equal values can go either way). After this partitioning, the pivot is in its final position. This is called the <em>partition</em> operation.</li>
+            <li>Recursively apply the above steps to the sub-array of elements with smaller values and separately to the sub-array of elements with greater values.</li></ol><p>The base case of the recursion is an array of size zero or one, which are sorted by definition.</p></div></article><aside class="SortInfo__Aside"><h3>Performance</h3><table><tbody><tr><td>Worst-case time complexity</td><td><code><span>O(<em>n</em><sup>2</sup>)</span></code></td></tr><tr><td>Average time complexity</td><td><code><span>O(<em>n</em>log<em>n</em>)</span></code></td></tr><tr><td>Best-case time complexity</td><td><code><span>O(<em>n</em>log<em>n</em>)</span></code></td></tr><tr><td>Worst-case space complexity</td><td><code><span>O(log<em>n</em>)</span></code></td></tr></tbody></table></aside>
+      </div>
 
-    </footer>
-
+      <div class="SortInfo__Body"><article class="SortInfo__Article"><p>You must select an algorithm before you can visualize it's execution on an array of numbers.</p></article><aside class="SortInfo__Aside"><h3>Performance</h3><table><tbody><tr><td>Worst-case time complexity</td><td><code></code></td></tr><tr><td>Average time complexity</td><td><code></code></td></tr><tr><td>Best-case time complexity</td><td><code></code></td></tr><tr><td>Worst-case space complexity</td><td><code></code></td></tr></tbody></table></aside></div>
     <script src="./scripts/main.js"></script>   <!--This should be at the end of body and should be loaded before sorts.js-->
     <script src="./scripts/visualizations.js"></script>  <!--This should be loaded after main.js-->
 
@@ -80,7 +84,12 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+<script>
+$('.navbar-nav>li>div>a').on('click', function(){
+  $('.navbar-collapse').collapse('hide');
+});
+</script>
+<script src="app.js"></script>
 </body>
 
 </html>
